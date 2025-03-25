@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head> 
+    <meta charset="UTF-8">  
+    <title>Trang Hỗ Trợ Việc Làm</title> <!--Tiêu đề , phần này hiển thị trên tab của trình duyệt-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!--Khai báo sử dụng bootstrap (1  framework CSS )-->
+    <!-- GHI CHÚ : Thẻ Style dùng để tạo CSS ( dùng để trang trí , điều chỉnh chiều dài chiều rộng và màu sắc cho web )-->
+    <style>
+        body { 
+            font-family: Arial, sans-serif; /* Chọn font chữ chính cho toàn bộ trang web */
+            background-color: #f8f9fa; /* Màu nền trang web */
+            color: #000; /* Màu chữ chính */
+        }
+        header {
+            background-color: #36b8ff; /* Màu nền của header */
+            color: white; /* Màu chữ của header */
+            padding: 20px; /* Khoảng cách giữa các phần tử và viền nội dung của header */
+            text-align: center; /* Căn giữa nội dung trong header */
+            height : 200px ;
+        }
+        header img {
+            max-width: 100%; /* Hình ảnh header sẽ chiếm đầy đủ chiều rộng */
+            height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
+        }
+        main {
+            padding: 20px; /* Khoảng cách giữa nội dung chính và các cạnh của main */
+        }
+        .form-group {
+            margin-bottom: 15px; /* Khoảng cách giữa các nhóm form */
+        }
+        .btn-primary {
+            background-color: #36b8ff; /* Màu nền nút chính */
+            margin-top: -30px;
+            border-color: #36b8ff; /* Màu viền của nút chính */
+        }
+        /* Kiểu dáng cho các mục ghi chú, lịch học, ghi chú lớp, lịch dạy */
+        .note-item, .schedule-item, .class-note-item, .class-schedule-item {
+            border: 1px solid #ddd; /* Viền và đường viền */
+            padding: 10px; /* Khoảng cách từ nội dung đến viền */
+            margin-bottom: 10px; /* Khoảng cách giữa các mục */
+            background-color: #fff; /* Màu nền của các mục */
+            border-radius: 5px; /* Bo góc các mục */
+            height :300px ; 
+        }
+        .hidden {
+            display: none; /* Ẩn phần tử có class 'hidden' */
+        }
+        .container {
+            max-width: 800px; /* Chiều rộng tối đa của container */
+            height: 900px; /* Chiều cao của container */
+        }
+        #login-section, #register-section {
+            display: none; /* Ẩn phần đăng nhập và đăng ký khi load trang */
+        }
+        footer {
+        background-color: #36b8ff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height :50px;
+}
+.h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #38B6FF;
+    border-color: #38B6FF;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #38b6ff;
+    border-color: #38b6ff;
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head> 
+        <meta charset="UTF-8">  
+        <title>TECHFUTURE-TÀI KHOẢN </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+            <h1> TECHFUTURE - CÔNG NGHỆ TÌM KIẾM VIỆC LÀM </h1>
+            <h3>GIAO DIỆN ĐĂNG KÝ / ĐĂNG NHẬP</h3>
+            <br>
+            <button id="login-btn" class="btn btn-light">Đăng nhập</button>
+            <button id="register-btn" class="btn btn-light">Đăng ký</button>
+        </header>
+        <main class="container">
+            <div id="login-section">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-username">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="login-username" name="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" class="form-control" id="login-password" name="login-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-role">Loại người dùng</label>
+                        <select class="form-control" id="login-role" name="login-role" required>
+                            <option value="student">Nhà tuyển dụng</option>
+                            <option value="teacher">Ứng viên xin việc</option>
+                        </select>
+                        <br>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                </form>
+            </div>
+            <div id="register-section">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-username">Tên đăng nhập</label>
+                        <input type="text" class="form-control" id="register-username" name="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" class="form-control" id="register-password" name="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-role">Loại người dùng</label>
+                        <select class="form-control" id="register-role" name="register-role" required>
+                            <option value="student">Nhà tuyển dụng </option>
+                            <option value="teacher">Ứng viên xin việc</option>
+                        </select>
+                        <br>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p>&copy;Bản quyền thuộc về TECHFUTURE 369 .</p>
+        </footer>
+    
+        <script>
+            document.getElementById('login-btn').addEventListener('click', function() {
+                document.getElementById('login-section').style.display = 'block';
+                document.getElementById('register-section').style.display = 'none';
+            });
+    
+            document.getElementById('register-btn').addEventListener('click', function() {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('register-section').style.display = 'block';
+            });
+    
+            document.getElementById('login-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                var username = document.getElementById('login-username').value;
+                var password = document.getElementById('login-password').value;
+                var role = document.getElementById('login-role').value;
+                var users = JSON.parse(localStorage.getItem('users')) || [];
+                var user = users.find(user => user.username === username && user.password === password && user.role === role);
+                if (user) {
+                    localStorage.setItem('loggedInUser', JSON.stringify(user));
+                    // Chuyển hướng sang trang Home.html sau khi đăng nhập thành công
+                    window.location.href = 'home.html';
+                } else {
+                    alert('Tên đăng nhập hoặc mật khẩu không đúng!');
+                }
+            });
+    
+            document.getElementById('register-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                var username = document.getElementById('register-username').value;
+                var password = document.getElementById('register-password').value;
+                var role = document.getElementById('register-role').value;
+                var users = JSON.parse(localStorage.getItem('users')) || [];
+                if (users.find(user => user.username === username)) {
+                    alert('Tên đăng nhập đã tồn tại!');
+                } else {
+                    users.push({ username: username, password: password, role: role });
+                    localStorage.setItem('users', JSON.stringify(users));
+                    alert('Đăng ký thành công!');
+                    document.getElementById('register-section').style.display = 'none';
+                    document.getElementById('login-section').style.display = 'block';
+                }
+            });
+        </script>
+    </body>
+    </html>
